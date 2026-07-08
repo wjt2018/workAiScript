@@ -1,0 +1,16 @@
+{
+  "authorEmails": [
+    "your-work-email@example.com",
+    "your-personal-email@example.com"
+  ],
+  "authorNames": [
+    "Your Name",
+    "your-github-username"
+  ],
+  "useGhSearch": true,
+  "repos": [
+    "D:\\code\\your-repo-1",
+    "D:\\code\\your-repo-2"
+  ],
+  "_note": "Copy this file to config.json and edit. authorEmails/authorNames filter git commits to yours (any match counts). repos = absolute paths of local repos to scan. useGhSearch also pulls today's pushed commits across GitHub via `gh`."
+}

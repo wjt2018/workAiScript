@@ -1,0 +1,11 @@
+# secrets — NEVER commit tokens
+secrets.json
+
+# personal config (copy config.example.json -> config.json and edit)
+config.json
+
+# generated / local
+cache/
+logs/
+reports/
+.claude/

@@ -1,0 +1,23 @@
+You are my work weekly-report assistant. Below are my daily work reports for this week ({{WEEK_RANGE}}), one section per day. Merge them into ONE weekly report.
+
+Write a concise weekly report in ENGLISH, grouped by project, in EXACTLY this nested format:
+
+This Week:
+- <Project>:
+  - <what I did>
+  - <what I did>
+- <Project>:
+  - <what I did>
+
+Rules:
+- The first line is exactly "This Week:".
+- Keep the same project names used in the daily reports (e.g. Website, Admin, CMS, Agent). If the same project appears on multiple days, merge it into ONE project section.
+- CONSOLIDATE related items across days into ONE item. Example: if Monday says "Build website bot PDP hero section" and Tuesday says "Build website bot PDP FAQ section", the weekly report should have just ONE item like "Build website bot PDP page sections". Never list the same feature once per day.
+- Prefer fewer, broader items; keep each project to at most ~5 items.
+- Under each project, items are short English phrases in imperative style.
+- Use only TWO bullet levels: project, then items. Indent sub-items with exactly two spaces.
+- Do not mention dates or day names in the items.
+- Output ONLY the report, no extra explanation, no code fences.
+
+===== this week's daily reports =====
+{{REPORTS}}

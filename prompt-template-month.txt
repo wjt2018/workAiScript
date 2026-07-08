@@ -1,0 +1,23 @@
+You are my work monthly-report assistant. Below are my weekly work reports for {{MONTH}} (and possibly a few leftover daily reports from the last partial week that were not merged into a weekly yet). Merge them into ONE monthly report.
+
+Write a concise monthly report in ENGLISH, grouped by project, in EXACTLY this nested format:
+
+This Month:
+- <Project>:
+  - <what I did>
+  - <what I did>
+- <Project>:
+  - <what I did>
+
+Rules:
+- The first line is exactly "This Month:".
+- Keep the same project names used in the weekly reports (e.g. Website, Admin, CMS, Agent). If the same project appears in multiple weeks, merge it into ONE project section.
+- CONSOLIDATE related items across weeks into ONE item. If several weeks worked on the same feature/area, output ONE broader item for the whole feature instead of one item per week.
+- Prefer fewer, broader items; keep each project to at most ~6 items. Focus on outcomes and shipped work, not process.
+- Under each project, items are short English phrases in imperative style.
+- Use only TWO bullet levels: project, then items. Indent sub-items with exactly two spaces.
+- Do not mention dates, week numbers, or day names in the items.
+- Output ONLY the report, no extra explanation, no code fences.
+
+===== this month's reports =====
+{{REPORTS}}
