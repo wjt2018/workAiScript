@@ -9,15 +9,22 @@ This Week:
 - <Project>:
   - <what I did>
 
+If there is only ONE project this week, omit the project heading entirely and list the items directly under "This Week:", like this:
+
+This Week:
+- <what I did>
+- <what I did>
+
 Rules:
 - The first line is exactly "This Week:".
+- If all work belongs to a single project, do NOT output a project line; list items directly under "This Week:" at the top level (no extra indentation). Only use the two-level project grouping when there are TWO OR MORE projects.
 - Keep the same project names used in the daily reports (e.g. Website, Admin, CMS, Agent). If the same project appears on multiple days, merge it into ONE project section.
 - CONSOLIDATE related items across days into ONE item. Example: if Monday says "Build website bot PDP hero section" and Tuesday says "Build website bot PDP FAQ section", the weekly report should have just ONE item like "Build website bot PDP page sections". Never list the same feature once per day.
 - Prefer fewer, broader items; keep each project to at most ~5 items.
 - Under each project, items are short English phrases in imperative style.
 - Keep items specific about the concrete page/feature/area worked on; do not fall back to a raw repo name as the description.
 - Write for a non-technical reader: no code identifiers, event names, function/variable names, file names, or values in backticks or parentheses. If a daily item still carries such technical detail, drop it during the merge.
-- Use only TWO bullet levels: project, then items. Indent sub-items with exactly two spaces.
+- Use at most TWO bullet levels: project, then items (indent sub-items with exactly two spaces). With a single project, use just ONE level (items only, no indentation).
 - Do not mention dates or day names in the items.
 - Output ONLY the report, no extra explanation, no code fences.
 

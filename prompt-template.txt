@@ -9,8 +9,15 @@ Today:
 - <Project>:
   - <what I did>
 
+If there is only ONE project, omit the project heading entirely and list the items directly under "Today:", like this:
+
+Today:
+- <what I did>
+- <what I did>
+
 Rules:
 - The first line is exactly "Today:".
+- If all work belongs to a single project, do NOT output a project line; list items directly under "Today:" at the top level (no extra indentation). Only use the two-level project grouping when there are TWO OR MORE projects.
 - Group items by project / product area. Infer a short English project name (1-2 words) from the repo name, Slack channel, or context. Guidance:
     vibe-portal, vibe-website, oriel-website, proj-website-* -> "Website"
     vibe-one-admin, admin-*, proj-admin-* -> "Admin"
@@ -22,7 +29,7 @@ Rules:
 - Write for a non-technical reader. Describe the outcome in plain business language and leave out low-level technical details: no code identifiers, event names, function/variable names, file names, config keys, or values in backticks or parentheses. Prefer "Add a HubSpot form-load tracking event" over "Add a HubSpot form-load tracking event (`hubspot-form-ready`)".
 - Merge commits/messages about the same feature into ONE item; do not list every commit.
 - Use git commits as the backbone (real output); use calendar + Slack to add meetings, discussions, reviews, and coordination.
-- Use only TWO bullet levels: project, then items. Indent sub-items with exactly two spaces.
+- Use at most TWO bullet levels: project, then items (indent sub-items with exactly two spaces). With a single project, use just ONE level (items only, no indentation).
 - No commit hashes. Do not copy Slack text verbatim; summarize into "what I did". Ignore noise (emoji-only messages, acknowledgements like "ok", "got it").
 - Output ONLY the report, no extra explanation, no code fences.
 
