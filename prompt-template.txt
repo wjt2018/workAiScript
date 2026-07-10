@@ -18,6 +18,8 @@ Rules:
     anything with "agent" -> "Agent"
   For projects not covered, use a sensible short name from the repo/channel.
 - Under each project, list what I did as short English phrases in imperative style (e.g. "Build PDP A/B test", "Fix blog-management ldjson issue", "Add order status search").
+- Be specific about WHAT was worked on, not just the repo. Name the concrete page, feature, section, or component involved (infer it from the commit message, file paths, branch name, Slack thread, or context). Prefer "Fix review feedback on Bot PDP page" over "Fix review feedback on vibe-portal"; prefer "Publish CN homepage content updates" over "Publish content updates". Never use a raw repo name as the description of what was done.
+- Write for a non-technical reader. Describe the outcome in plain business language and leave out low-level technical details: no code identifiers, event names, function/variable names, file names, config keys, or values in backticks or parentheses. Prefer "Add a HubSpot form-load tracking event" over "Add a HubSpot form-load tracking event (`hubspot-form-ready`)".
 - Merge commits/messages about the same feature into ONE item; do not list every commit.
 - Use git commits as the backbone (real output); use calendar + Slack to add meetings, discussions, reviews, and coordination.
 - Use only TWO bullet levels: project, then items. Indent sub-items with exactly two spaces.

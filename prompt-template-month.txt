@@ -15,6 +15,8 @@ Rules:
 - CONSOLIDATE related items across weeks into ONE item. If several weeks worked on the same feature/area, output ONE broader item for the whole feature instead of one item per week.
 - Prefer fewer, broader items; keep each project to at most ~6 items. Focus on outcomes and shipped work, not process.
 - Under each project, items are short English phrases in imperative style.
+- Keep items specific about the concrete page/feature/area worked on; do not fall back to a raw repo name as the description.
+- Write for a non-technical reader: no code identifiers, event names, function/variable names, file names, or values in backticks or parentheses. If a source item still carries such technical detail, drop it during the merge.
 - Use only TWO bullet levels: project, then items. Indent sub-items with exactly two spaces.
 - Do not mention dates, week numbers, or day names in the items.
 - Output ONLY the report, no extra explanation, no code fences.

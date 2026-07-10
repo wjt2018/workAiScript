@@ -24,9 +24,9 @@
 
 | 周期 | 触发时间 | 做什么 |
 |------|----------|--------|
-| **日报** | 每个工作日 17:50 | 汇总当天三源数据 → 生成日报 |
-| **周报** | 每周五 18:00 | 合并本周日报,同项目多天的工作**归并成一条** → 删除已合并的日报 |
-| **月报** | 每月最后一天 18:10 | 合并当月周报(+残留日报),同项目跨周工作**归并成一条** → 删除已合并的源文件 |
+| **日报** | 每个工作日 18:00 | 汇总当天三源数据 → 生成日报 |
+| **周报** | 每周五 18:02 | 合并本周日报,同项目多天的工作**归并成一条** → 删除已合并的日报 |
+| **月报** | 每月最后一天 18:04 | 合并当月周报(+残留日报),同项目跨周工作**归并成一条** → 删除已合并的源文件 |
 
 **贴合中国工作日历:**
 
@@ -138,13 +138,13 @@ Copy-Item config.example.json config.json
 ### 第 3 步:注册计划任务
 
 ```powershell
-# 日报:每天 17:50(脚本内部判断是否工作日)
+# 日报:每天 18:00(脚本内部判断是否工作日)
 powershell -NoProfile -ExecutionPolicy Bypass -File .\register-task.ps1
 
-# 周报:每周五 18:00
+# 周报:每周五 18:02
 powershell -NoProfile -ExecutionPolicy Bypass -File .\register-weekly-task.ps1
 
-# 月报:每月最后一天 18:10
+# 月报:每月最后一天 18:04
 powershell -NoProfile -ExecutionPolicy Bypass -File .\register-monthly-task.ps1
 ```
 
@@ -207,9 +207,9 @@ Unregister-ScheduledTask -TaskName WorkAiDailyReport -Confirm:$false
 | `setup-google.ps1` | **一次性**:Google 授权,拿到并保存 refresh token |
 | `setup-slack.ps1` | **一次性**:保存并校验 Slack User Token(`xoxp`,用于读取发言) |
 | `setup-slack-send.ps1` | **一次性**:保存 Slack Bot Token(`xoxb`,用于发送报告) |
-| `register-task.ps1` | 注册 / 刷新日报计划任务(每天 17:50) |
-| `register-weekly-task.ps1` | 注册 / 刷新周报计划任务(每周五 18:00) |
-| `register-monthly-task.ps1` | 注册 / 刷新月报计划任务(每月最后一天 18:10) |
+| `register-task.ps1` | 注册 / 刷新日报计划任务(每天 18:00) |
+| `register-weekly-task.ps1` | 注册 / 刷新周报计划任务(每周五 18:02) |
+| `register-monthly-task.ps1` | 注册 / 刷新月报计划任务(每月最后一天 18:04) |
 | `prompt-template.txt` | 日报提示词模板(UTF-8,可改格式 / 语气) |
 | `prompt-template-week.txt` | 周报提示词模板(UTF-8,可改归并规则) |
 | `prompt-template-month.txt` | 月报提示词模板(UTF-8,可改归并规则) |
